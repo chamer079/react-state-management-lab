@@ -1,3 +1,4 @@
+import ZombieFighterList from "./components/ZombieFighterList"
 import { useState } from "react"
 
 
@@ -80,11 +81,23 @@ const App = () => {
       },   
   ])
 
-
+  const renderZombieFighters = zombieFighters.map((zombieFighter) => {
+    return(
+      <ZombieFighterList
+      key = {zombieFighter.name}
+      zombieFighter = {zombieFighter}
+      />
+    )
+  })
 
   return (
+    <>
     <h1>Sanity Check</h1>
+    {/* <h2><ZombieFightersList /></h2> */}
+    {renderZombieFighters}
+    </>
   )
+
 }
 
 export default App
