@@ -92,9 +92,8 @@ const App = () => {
 
   return (
     <>
-    <h1>Sanity Check</h1>
-    {/* <h2><ZombieFightersList /></h2> */}
     {renderZombieFighters}
+    <p> Current Value: </p>{money}
     </>
   )
 
