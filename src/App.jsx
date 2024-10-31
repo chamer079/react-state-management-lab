@@ -1,5 +1,5 @@
-import ZombieFighterList from "./components/ZombieFighterList"
 import { useState } from "react"
+import "./App.css"
 
 
 const App = () => {
@@ -83,12 +83,18 @@ const App = () => {
 
   const renderZombieFighters = zombieFighters.map((zombieFighter) => {
     return(
-      <ZombieFighterList
-      key = {zombieFighter.name}
-      zombieFighter = {zombieFighter}
-      />
+      <>
+        <ul>
+          <li><img src={zombieFighter.img}></img></li>
+          <li>Name: {zombieFighter.name}</li>
+          <li>Price: {zombieFighter.price}</li>
+          <li>Strength: {zombieFighter.strength}</li>
+          <li>Agility: {zombieFighter.agility}</li>
+        </ul>
+      </>
     )
   })
+  
 
   return (
     <>
